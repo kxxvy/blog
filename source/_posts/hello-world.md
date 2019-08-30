@@ -3,38 +3,12 @@ title: Hello World
 top: 5
 tag: 随笔
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+早就想搭建一个自己的博客了，前几天看到了Litten的博客，找到了一个我比较中意的主题，经过几天的努力和自我摸索，终于搭建起了自己的博客，仿佛有了自己的一片小天地。
 
-## Quick Start
+折腾了我好几天的时间，从对搭博客的一无所知变得能亲手写自己的第一篇博客了，内心多了几分欣慰。
 
-### Create a new post
+我将在这里记录我工作和生活中的点滴，我将在这片荒芜的地方播种，看它生根发芽，盖起一座属于自己的城堡。
 
-``` bash
-$ hexo new "My New Post"
-```
+或许几十年后，甚至百年后，暮然回首，如若有人有幸看到这里记录的一点一滴，将会是我存在的证明，也希望这里记录的东西能对你们有所帮助。
 
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+HELLO WORLD , 我来啦~
