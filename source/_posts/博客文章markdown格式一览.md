@@ -52,8 +52,8 @@ tags: markdown语法
 
 ## 表格
 
-| Tables        | Are           | Cool  |
-| :-----------: |:-------------:| :----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| 姓名 | 技能 | 排行 |
+| :--: |:---:|:---:|
+| 刘备 | 哭 | 大哥 |
+| 关羽 | 打 | 二哥 |
+| 张飞 | 骂 | 三弟 |
