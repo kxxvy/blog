@@ -40,7 +40,7 @@ CSS盒模型和IE盒模型的区别：
 
 代码如下：
 
-```
+```css
     /* 设置当前盒子为 标准盒模型(默认) */
     box-sizing: content-box;
 
@@ -54,7 +54,7 @@ CSS盒模型和IE盒模型的区别：
 
 ### 方式一：通过DOM节点的style样式获取
 
-```
+```javascript
 element.style.width/height;
 ```
 
@@ -63,7 +63,7 @@ element.style.width/height;
 
 ### 方式二(通用型)
 
-```
+```javascript
 window.getComputed(element).width/height;
 ```
 
@@ -71,7 +71,7 @@ window.getComputed(element).width/height;
 
 ### 方式三(IE独有的)
 
-```
+```javascript
 element.currentStyle.width/height;
 ```
 
@@ -79,7 +79,7 @@ element.currentStyle.width/height;
 
 ### 方式四
 
-```
+```javascript
 element.getBoundingClientRect().width/height;
 ```
 

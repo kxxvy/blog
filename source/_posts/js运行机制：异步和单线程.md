@@ -30,7 +30,7 @@ tags: [前端,面试题,异步和单线程]
 
 现有如下代码：
 
-``` 
+```javascript
     console.log(1);
     setTimeout(function () {
         console.log(2);
@@ -43,7 +43,7 @@ tags: [前端,面试题,异步和单线程]
 
 可如果我把延时的时间从`1000`改为`0`：
 
-``` 
+```javascript
     console.log(1);
     setTimeout(function () {
         console.log(2);
@@ -74,7 +74,7 @@ js是单线程（同一时间只能做一件事），而且有一个<font color=
 
 现有如下代码：
 
-``` 
+```javascript
     console.log('A');
     while (1) {
 
@@ -86,7 +86,7 @@ js是单线程（同一时间只能做一件事），而且有一个<font color=
 
 可如果我把代码改成下面的样子：
 
-``` 
+```javascript
     console.log('A');
 
     setTimeout(function () {
@@ -102,7 +102,7 @@ js是单线程（同一时间只能做一件事），而且有一个<font color=
 
 **<font size=4>题目三：同步</font>**
 
-```
+```javascript
     console.log('A');
 
     alert('haha'); //1秒之后点击确认
@@ -129,7 +129,7 @@ js是单线程（同一时间只能做一件事），而且有一个<font color=
 
 代码举例：
 
-``` 
+```javascript
     console.log('start');
     var img = document.createElement('img');
     img.onload = function () {
@@ -162,7 +162,7 @@ Event Loop
 
 **<font size=4>容易答错的题目</font>**
 
-``` 
+```javascript
     for (var i = 0; i < 3; i++) {
         setTimeout(function () {
             console.log(i);
@@ -176,7 +176,7 @@ Event Loop
 
 我们把上面的题目再加一行代码。最终代码如下：
 
-``` 
+```javascript
     for (var i = 0; i < 3; i++) {
         setTimeout(function () {
             console.log(i);

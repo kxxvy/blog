@@ -19,7 +19,7 @@ DOM事件的级别，准确来说，是<font color=red>DOM标准</font>定义的
 
 <font color=orange>DOM0的写法：</font>
 
-```
+```javascript
 element.onclick=function(){
 
 }
@@ -28,7 +28,8 @@ element.onclick=function(){
 上面的代码是在js中的写法；如果要在html中写，写法是：在onclick属性中，加js语句。
 
 <font color=orange>DOM2的写法：</font>
-```
+
+```javascript
 element.addEventListener('click',function(){
 
 },false);
@@ -37,7 +38,8 @@ element.addEventListener('click',function(){
 【重要】上面的第三参数中，true表示事件在<font color=red>捕获阶段</font>触发，false表示事件在<font color=red>冒泡阶段</font>触发（默认）。如果不写，则默认为false。
 
 <font color=orange>DOM3的写法：</font>
-```
+
+```javascript
 element.addEventListener('keyup',function(){
 
 },false);
@@ -84,7 +86,8 @@ PS1：第一个接受到事件的对象是<font color=red>window
 </font>（有人会说body，有人会说html，这都是错误的）。
 PS2：JS中涉及到DOM对象时，有两个对象最常用：window、document。它们俩也是最先获取到事件的。
 代码如下：
-```
+
+```javascript
     window.addEventListener("click", function () {
         alert("捕获 window");
     }, true);
@@ -128,7 +131,8 @@ PS2：JS中涉及到DOM对象时，有两个对象最常用：window、document�
 用户做的是什么操作（比如，是敲键盘了，还是点击鼠标了），这些事件基本都是通过Event对象拿到的。
 
 **方法一**
-```
+
+```javascript
 event.preventDefault();
 ```
 
@@ -143,17 +147,20 @@ event.preventDefault();
 有的时候，业务中不需要事件进行冒泡。比如说，业务这样要求：单击子元素做事件A，单击父元素做事件B，如果不阻止冒泡的话，出现的问题是：单击子元素时，子元素和父元素都会做事件A。这个时候，就要用到阻止冒泡了。
 
 w3c的方法：（火狐、谷歌、IE11）
-```
+
+```javascript
 event.stopPropgation();
 ```
 
 IE10以下则是：
-```
+
+```javascript
 event.cancelBubble = true;
 ```
 
 兼容代码如下：
-```
+
+```javascript
    box3.onclick = function (event) {
 
         alert("child");
@@ -173,8 +180,9 @@ event.cancelBubble = true;
 上方代码中，我们对box3进行了阻止冒泡，产生的效果是：事件不会继续传递到father、grandfather、body了。
 
 **方法三：设置事件优先级**
-```
-enent.stopImmediatePropagation();
+
+```javascript
+event.stopImmediatePropagation();
 ```
 
 这个方法比较长，一般人没说过。解释如下：
@@ -182,7 +190,8 @@ enent.stopImmediatePropagation();
 比如说，我用addEventListener给某按钮同时注册了事件A、事件B。此时，如果我单击按钮，就会执行事件A和事件B。现在要求：单击按钮时，只执行事件A，不执行事件B。该怎么做呢？这是时候，就可以用到`stopImmediatePropagation`方法了。做法是：在事件A的响应函数中加入这句话。
 
 **属性4、属性5（事件委托中用到）**
-```
+
+```javascript
     event.currentTarget   //当前所绑定的事件对象。在事件委托中，指的是【父元素】。
 
     event.target  //当前被点击的元素。在事件委托中，指的是【子元素】。
@@ -196,7 +205,7 @@ enent.stopImmediatePropagation();
 
 自定义事件的代码如下：
 
-```
+```javascript
     var myEvent = new Event('clickTest');
     element.addEventListener('clickTest', function () {
         console.log('kv');
@@ -207,7 +216,8 @@ enent.stopImmediatePropagation();
 ```
 
 上面这个事件是定义完了之后，就直接自动触发了。在正常的业务中，这个事件一般是和别的事件结合用的。比如延时器设置按钮的动作：
-```
+
+```javascript
     var myEvent = new Event('clickTest');
 
     element.addEventListener('clickTest', function () {

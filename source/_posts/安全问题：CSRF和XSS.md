@@ -107,7 +107,8 @@ Encode的作用是将`$var`等一些字符进行转化，使得浏览器在最�
 
 比如说这段代码：
 
-```<script>alert(1)</script>
+```javascript
+<script>alert(1)</script>
 ```
 
 若不进行任何处理，则浏览器会执行alert的js操作，实现XSS注入。
