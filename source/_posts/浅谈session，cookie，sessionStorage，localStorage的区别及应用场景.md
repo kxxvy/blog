@@ -1,6 +1,6 @@
 ---
 title: 浅谈session，cookie，sessionStorage，localStorage的区别及应用场景
-date: 2019-09-24
+date: 2019-11-24
 tags: [前端,面试题,session，cookie]
 ---
 浏览器的缓存机制提供了可以将用户数据存储在客户端上的方式，可以利用cookie，session等服务端进行数据交互。
