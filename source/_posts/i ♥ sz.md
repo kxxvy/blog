@@ -10,4 +10,4 @@ tags: 随笔
 
 ![sz.png](https://i.loli.net/2021/10/28/gY5tuI7Lm3zTQkN.jpg)
 
-谁能想到那会是最后一面。
+却出乎意料地见证了深圳地标的陨落。
