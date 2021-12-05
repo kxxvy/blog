@@ -33,3 +33,5 @@ wx.showToast()这个 api 有时在使用时会一闪而过，
 恰好就也有这样的问题
 
 所以要在 `showToast` 之前调用 `wx.hideLoading`
+
+哦~，又是一个极小的细节！
