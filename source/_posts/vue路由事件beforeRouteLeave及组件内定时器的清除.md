@@ -1,6 +1,6 @@
 ---
 title: vue路由事件beforeRouteLeave及组件内定时器的清除
-date: 2021-12-04
+date: 2021-11-18
 tags: [beforeRouteLeave]
 ---
 
