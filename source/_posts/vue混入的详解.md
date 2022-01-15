@@ -1,7 +1,7 @@
 ---
 title: vue混入的详解
 date: 2021-07-12
-tags: [vue混入]
+tags: [vue, mixin]
 ---
 
 ## 简介
@@ -42,7 +42,7 @@ tags: [vue混入]
 
 ## 数据对象合并
 
-数据对象在内部会进行浅合并 (一层属性深度)，在和组件的数据发生冲突时以组件数据优先（组件的data中变量会覆盖混入对象的data中变量）
+数据对象在内部会进行浅合并 (一层属性深度)，在和组件的数据发生冲突时以组件数据优先（组件的 data 中变量会覆盖混入对象的 data 中变量）
 
 ```html
 <body>
@@ -123,7 +123,7 @@ tags: [vue混入]
 
 ## 局部混入
 
-在 components 目录下创建一个mixins文件夹，并在 mixins 目录下创建一个 mixin.js 文件
+在 components 目录下创建一个 mixins 文件夹，并在 mixins 目录下创建一个 mixin.js 文件
 
 ![aaa.jpg](https://i.loli.net/2021/09/11/hN3UZ1maVBdbXFP.jpg)
 
@@ -133,17 +133,17 @@ tags: [vue混入]
 const mixin = {
   data() {
     return {
-      msg: '哈哈'
-    }
+      msg: "哈哈",
+    };
   },
   methods: {
     mixinMethod() {
-      console.log(this.msg + '，这是mixin混入的方法')
-    }
-  }
-}
+      console.log(this.msg + "，这是mixin混入的方法");
+    },
+  },
+};
 
-export default mixin
+export default mixin;
 ```
 
 在需要的页面引入并使用
@@ -211,32 +211,31 @@ export default {
 在 main.js 中写入如下代码
 
 ```js
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+import Vue from "vue";
+import App from "./App";
+import router from "./router";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 Vue.mixin({
   data() {
     return {
-      msg: '哈哈'
-    }
+      msg: "哈哈",
+    };
   },
   methods: {
     mixinMethod() {
-      console.log(this.msg + '，这是mixin混入的方法')
-    }
-  }
-})
+      console.log(this.msg + "，这是mixin混入的方法");
+    },
+  },
+});
 
 new Vue({
-  el: '#app',
+  el: "#app",
   router,
   components: { App },
-  template: '<App/>'
-})
-
+  template: "<App/>",
+});
 ```
 
 在组件中直接使用
@@ -248,15 +247,60 @@ new Vue({
 <script>
   export default {
     data() {
-      return {
-
-      }
+      return {};
     },
     mounted() {
-      this.mixinMethod()
-    }
-  }
+      this.mixinMethod();
+    },
+  };
 
   // 哈哈，这是mixin混入的方法
 </script>
+```
+
+## 追加 vue3 混入
+
+在 mixin.js 文件里写入如下代码
+
+```js
+import { computed, ref } from "vue";
+export default function () {
+  const count = ref(1);
+  const plusOne = computed(() => count.value + 1);
+
+  function hello() {
+    console.log("hello mixin" + plusOne.value);
+  }
+
+  return {
+    count,
+    plusOne,
+    hello,
+  };
+}
+```
+
+在 vue 页面引入
+
+```js
+import mixin from 'mixin.js'
+
+export default {
+  setup() {
+    const { count, plusOne, hello } = mixin()
+    hello()
+    console.log(count.value, plusOne.value)
+  }
+}
+
+// 调用组件中的局部变量
+export default {
+  setup() {
+    // 某个局部值得合成函数需要用到
+    const myLocalVal = ref(0)
+
+    // 它必须作为参数显式地传递
+    const { ... } = mixin(myLocalVal)
+  }
+}
 ```

@@ -39,7 +39,7 @@ list.value = data;
 ## 推荐写法
 
 ```js
-import { reactive, toRefs } from 'vue
+import { reactive, toRefs } from 'vue'
 
 setup(props, context) {
   const state = reactive({

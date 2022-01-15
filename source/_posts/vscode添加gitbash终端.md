@@ -1,10 +1,10 @@
 ---
 title: VS Code添加git bash终端
-date: 2022-21-03
+date: 2022-01-03
 tags: [vscode]
 ---
 
-在写 `node` 时，
+在开发脚手架时，
 
 发现 `powershell` 似乎不能识别 `shebang`，
 
