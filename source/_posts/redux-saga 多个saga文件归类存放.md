@@ -20,6 +20,8 @@ const rootReducer = combineReducers({
 export default rootReducer;
 ```
 
+<!-- more -->
+
 同样的，redux-saga 依然可以分模块存放于单一的入口文件中。
 
 ```js
