@@ -8,7 +8,7 @@ tags: [Redux]
 
 调用 this.props.dispatch（updateState（key，value）），我需要立即对更新后的状态做一些事情。
 
-有没有什么方法可以调用最新状态的回调，就像我在 React 中做的那样？
+有没有什么方法可以调用最新状态的回调？
 
 <!-- more -->
 

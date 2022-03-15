@@ -4,7 +4,7 @@ date: 2021-04-23
 tags: [微信小程序, canvas]
 ---
 
-这两天用小程序实现生成微信二维码，用 iphone 手机测一直没问题，结果用 Android 测却发 i 西安画的图形始终缺个角，锯齿形的，最后查阅多方资料，发现使用 ctx.arc + ctx.lineTo 就能避免 Android 错误，Android 只使用 ctx.arcTo 不兼容, 真是个奇怪的八哥！！！
+这两天用小程序实现生成微信二维码，用 iphone 手机测一直没问题，结果用 Android 测却发现画的图形始终缺个角，锯齿形的，最后查阅多方资料，发现使用 ctx.arc + ctx.lineTo 就能避免 Android 错误，Android 只使用 ctx.arcTo 不兼容, 真是个奇怪的八哥！！！
 
 <!-- more -->
 

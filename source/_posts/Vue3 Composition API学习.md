@@ -49,7 +49,7 @@ vue3 最大的改变是加入了这个灵感来源于 React Hook 的 Composition
 从上面的基础例程可以看到，vue3 的.vue 组件大体还是和 vue2 一致，由 template、script 和 style 组成，作出的改变有以下几点：
 
 - 组件增加了 setup 选项，组件内所有的逻辑都在这个方法内组织，返回的变量或方法都可以在模板中使用。
-- vue2 中 data、computed 等选项仍然支持，但使用 setup 时不建议再使用 vue2 中的 data 灯选项。
+- vue2 中 data、computed 等选项仍然支持，但使用 setup 时不建议再使用 vue2 中的 data 等选项。
 - 提供了 reactive、computed、watch、onMounted 等抽离的接口代替 vue2 中 data 等选项。
 
 ## 二、为什么使用 Composition API？
