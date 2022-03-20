@@ -126,7 +126,7 @@ localStorage：<font color=blue>window.localStorage;</font>；sessionStorage：<
 
 <font color=green>（1）存储空间更大</font>：cookie为4KB，而WebStorage是5MB；
 
-<font color=green>（2）节省网络流量</font>：WebStorage不会传送到服务器，存储在本地的数据可以直接获取，也不会像cookie一样美词请求都会传送到服务器，所以减少了客户端和服务器端的交互，节省了网络流量；
+<font color=green>（2）节省网络流量</font>：WebStorage不会传送到服务器，存储在本地的数据可以直接获取，也不会像cookie一样每次请求都会传送到服务器，所以减少了客户端和服务器端的交互，节省了网络流量；
 
 （3）对于那种只需要在用户浏览一组页面期间保存而关闭浏览器后就可以丢弃的数据，sessionStorage会非常方便；
 

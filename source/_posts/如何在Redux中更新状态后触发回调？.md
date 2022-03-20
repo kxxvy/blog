@@ -14,7 +14,7 @@ tags: [Redux]
 
 ## 解决方案
 
-**1。 componentDidUpdate 检查值是否已更改，然后执行某些操作...**
+**1、 componentDidUpdate 检查值是否已更改，然后执行某些操作...**
 
 ```js
 componentDidUpdate(prevProps){
@@ -22,7 +22,7 @@ componentDidUpdate(prevProps){
 }
 ```
 
-**2。 redux-promise （中间件将调度承诺的已解析值）**
+**2、 redux-promise （中间件将调度承诺的已解析值）**
 
 ```js
 export const updateState = (key，value )=>
@@ -42,7 +42,7 @@ this.props.dispatch(updateState(key，value) ).then(()=> {
 
 ```
 
-**3。redux-thunk**
+**3、redux-thunk**
 
 ```js
 export const updateState = (key，value) => dispatch => {
