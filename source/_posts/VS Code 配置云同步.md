@@ -10,7 +10,6 @@ tags: [vscode]
 
 <!-- more -->
 
-
 ## 一、将自己本地的配置云同步到 GitHub
 
 （1）安装插件 settings-sync。
