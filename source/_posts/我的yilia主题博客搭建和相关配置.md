@@ -63,7 +63,7 @@ http://localhost:4000/
 ```
 deploy:
   type: git
-  repository: https://github.com/kxxvy/kxxvy.github.io.git
+  repository: https://github.com/k1vv1/k1vv1.github.io.git
   branch: master
 ```
 
@@ -96,7 +96,7 @@ password for 'https://github.com':
 ```
 
 输入你的 github 账号密码即可。
-hexo d 执行成功后便可通过https://kxxvy.github.io 访问博客，看到的内容和 http://localhost:4000 相同。 3.记住 github 密码
+hexo d 执行成功后便可通过https://k1vv1.github.io 访问博客，看到的内容和 http://localhost:4000 相同。 3.记住 github 密码
 在 github 添加 ssh key 后不需要每次更新博客再输入用户名和密码。首先检查本地是否包含 ssh keys。如果存在则直接将 ssh key 添加到 GitHub 之中，否则新生成 ssh key。
 
 执行下述命令生成新的 ssh key
@@ -173,14 +173,14 @@ test=sUrl.substring(20);
 '//api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + sUrl
 ```
 
-举例，我的网址是（kxxvy.github.io）那么就改为：
+举例，我的网址是（k1vv1.github.io）那么就改为：
 
 ```
 <div class="page-modal wx-share js-wx-box">
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="<%- 'qrcode' in locals ? qrcode(sUrl) : '//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://kxxvy.github.io/' + test  %>" alt="微信分享二维码">
+      <img src="<%- 'qrcode' in locals ? qrcode(sUrl) : '//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://k1vv1.github.io/' + test  %>" alt="微信分享二维码">
     </div>
 </div>
 ```
